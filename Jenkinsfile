@@ -13,10 +13,10 @@ pipeline {
                 git 'https://github.com/narendra1997/assignment1.git'
 
                 // Run Maven on a Unix agent.
-                //sh "mvn -Dmaven.test.failure.ignore=true clean package"
+                sh "mvn -Dmaven.test.failure.ignore=true clean install -Dskiptests"
 
                 // To run Maven on a Windows agent, use
-                 bat "mvn -Dmaven.test.failure.ignore=true clean install -DskipTests"
+                // bat "mvn -Dmaven.test.failure.ignore=true clean install -DskipTests"
             }
 
             
